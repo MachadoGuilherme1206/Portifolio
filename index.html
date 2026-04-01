@@ -1,61 +1,123 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guilherme Machado - Portifólio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="90" tabindex="0">
-    <nav class="navbar navbar-expand-sm bg-black navbar-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img class="imgLogo" src="/images/LogoGM.png" alt="brandGM"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-          <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projetos">Projetos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contato">Contato</a>
-            </li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guilherme Machado - Portifólio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="90" tabindex="0">
+  <nav class="navbar navbar-expand-sm bg-black navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="imgLogo" src="/images/LogoGM.png" alt="brandGM"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projetos">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section id="sobre" class="section text-light">
+      <div class="container sobre-container">
+        <div class="sobre-texto">
+          <h1 >Sobre Mim</h1>
+          <br>
+          <p>
+            Sou estudante de Desenvolvimento de Software Multiplataforma na Fatec Prof. Jessen Vidal
+            e estou em busca de uma oportunidade na área de Tecnologia da Informação, onde possa aplicar
+            e expandir meus conhecimentos.
+          </p>
+          <p>
+            Tenho experiência no desenvolvimento e manutenção de software, participando de projetos utilizando
+            Python, JavaScript, PHP e HTML/CSS. Gosto de trabalhar na resolução de problemas e no desenvolvimento
+            de soluções eficientes.
+          </p>
+          <p>
+            Sou uma pessoa organizada, colaborativa e com facilidade para trabalhar em equipe. Tenho grande
+            interesse em continuar evoluindo nas áreas de programação, redes e segurança.
+          </p>
+        </div>
+        <div class="sobre-foto">
+          <img src="/images/pessoa.jpg" alt="Foto de Guilherme">
         </div>
       </div>
-    </nav>
+    </section>
+    <section id="projetos" class="section bg-dark text-light">
+      <div class="container">
+        <h1>Projetos</h1>
+        <p>Esta é a seção Projetos. Colete seus trabalhos e demonstrações aqui.</p>
+      </div>
+    </section>
+    <section id="contato" class="section bg-black text-light">
+      <div class="container">
+        <h1>Contato</h1>
+        <p>Vamos nos conectar! Escolha o canal que preferir.</p>
+        <div class="card bg-dark bg-opacity-50 border-light rounded-4 p-4" style="max-width: 760px;">
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <a href="https://www.linkedin.com/in/guilherme-machado-silva-ba2332323/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                <div class="d-flex align-items-center gap-3 p-3 rounded-3 hover-shadow" style="background: rgba(255,255,255,0.05);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="36" height="36" />
+                  <span class="text-light fw-semibold">LinkedIn</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a href="https://github.com/MachadoGuilherme1206" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                <div class="d-flex align-items-center gap-3 p-3 rounded-3 hover-shadow" style="background: rgba(255,255,255,0.05);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="36" height="36" />
+                  <span class="text-light fw-semibold">GitHub</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a href="mailto:guilherme.12062008@gmail.com" class="text-decoration-none">
+                <div class="d-flex align-items-center gap-3 p-3 rounded-3 hover-shadow" style="background: rgba(255,255,255,0.05);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="36" height="36" />
+                  <span class="text-light fw-semibold">Email</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <a href="https://wa.me/12991511101" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                <div class="d-flex align-items-center gap-3 p-3 rounded-3 hover-shadow" style="background: rgba(255,255,255,0.05);">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="36" height="36" />
+                  <span class="text-light fw-semibold">WhatsApp</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer> 
+    <div class="container text-center py-3">
+        <span class="text-light">&copy; 2026 Guilherme Machado Silva. Todos os direitos reservados.</span>
+      </div>
+  </footer>
 
-    <main class="main-content">
-      <section id="sobre" class="section text-light">
-        <div class="container">
-          <h1>Sobre</h1>
-          <p>Esta é a seção Sobre. Adicione aqui o conteúdo do seu portfólio.</p>
-        </div>
-      </section>
-      <section id="projetos" class="section bg-dark text-light">
-        <div class="container">
-          <h1>Projetos</h1>
-          <p>Esta é a seção Projetos. Colete seus trabalhos e demonstrações aqui.</p>
-        </div>
-      </section>
-      <section id="contato" class="section bg-black text-light">
-        <div class="container">
-          <h1>Contato</h1>
-          <p>Esta é a seção Contato. Inclua seu e-mail, LinkedIn ou formulário.</p>
-        </div>
-      </section>
-    </main>
-    <footer></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>

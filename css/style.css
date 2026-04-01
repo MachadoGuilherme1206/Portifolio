@@ -1,0 +1,47 @@
+/* Cores:  #2cff05 #706677 #001524 */
+
+
+body {
+    background-color: #001524;
+    color: #00F0B5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+#sobre {
+    background: linear-gradient(180deg, #2cff05 0%, #1e7f1c 50%, #101018 100%);
+}
+
+#projetos {
+    background: linear-gradient(180deg, #101018 0%, #3d3a46 50%, #706677 100%);
+}
+
+#contato {
+    background: linear-gradient(180deg, #706677 0%, #2e2f36 50%, #001524 100%);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.main-content {
+    padding-top: 90px;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 80px 15px 60px;
+}
+
+.imgLogo {
+    width: 100%;
+    max-width: 175px;
+    height: auto;
+    display: block;
+}
+

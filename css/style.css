@@ -1,211 +1,308 @@
-/* Cores:  #2cff05 #706677 #001524 */
+/* Paleta: #2cff05  #706677  #001524  #00F0B5 */
 
-
+/* ===================== BASE ===================== */
 body {
-    background-color: #001524;
-    color: #00F0B5;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  background-color: #001524;
+  color: #00F0B5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
+/* ===================== GRADIENTES DE SEÇÃO ===================== */
 #sobre {
-    background: linear-gradient(180deg, #2cff05 0%, #1e7f1c 50%, #101018 100%);
+  background: linear-gradient(180deg, #3430b0 0%, #201c64 50%, #101018 100%);
 }
 
 #formacoes {
-    background: linear-gradient(180deg, #101018 0%, #3d3a46 50%, #706677 100%);
+  background: linear-gradient(180deg, #101018 0%, #3d3a46 50%, #706677 100%);
+}
+
+#skills {
+  background: linear-gradient(180deg, #706677 0%, #2b2d3a 50%, #0a1a2e 100%);
+}
+
+#certificacoes {
+  background: linear-gradient(180deg, #0a1a2e 0%, #01223a 60%, #001524 100%);
 }
 
 #projetos {
-    background: linear-gradient(180deg, #706677 0%, #2e2f36 50%, #001524 100%);
+  background: linear-gradient(180deg, #001524 0%, #0d2235 50%, #01223a 100%);
 }
 
+/* ===================== NAVBAR ===================== */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  border-bottom: 1px solid rgba(0, 240, 181, 0.12);
 }
 
+.nav-link {
+  position: relative;
+  transition: color 0.25s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: blue;
+  transition: width 0.3s, left 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+  left: 10%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: blue !important;
+}
+
+/* ===================== LAYOUT ===================== */
 .main-content {
-    padding-top: 90px;
+  padding-top: 90px;
 }
 
 .section {
-    min-height: 100vh;
-    padding: 80px 15px 60px;
+  min-height: 100vh;
+  padding: 80px 15px 60px;
 }
 
+/* ===================== TÍTULOS DE SEÇÃO ===================== */
+.section-title {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: whitesmoke;
+  border-radius: 2px;
+}
+
+/* ===================== LOGO ===================== */
 .imgLogo {
-    width: 100%;
-    max-width: 175px;
-    height: auto;
-    display: block;
+  width: 100%;
+  max-width: 175px;
+  height: auto;
+  display: block;
 }
 
-/* SOBRE */
-
-.sobre-container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
-    flex-wrap:wrap;
+/* ===================== SOBRE ===================== */
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.sobre-texto{
-    max-width:550px;
+.sobre-texto {
+  max-width: 550px;
 }
 
-.titulo-sobre{
-    color:#2cff05;
-    font-size:42px;
-    font-weight:700;
-    margin-bottom:25px;
+.sobre-texto p {
+  color: #ffffff;
+  line-height: 1.8;
+  font-size: 17px;
 }
 
-.sobre-texto p{
-    color:#ffffff;
-    line-height:1.7;
-    font-size:17px;
-}
-
-.sobre-foto img{
-    width:320px;
-    border-radius:18px;
-    object-fit:cover;
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
+.sobre-foto img {
+  width: 320px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 0 35px rgba(0, 240, 181, 0.2);
 }
 
 .sobre-contatos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 320px;
-    margin-top: 20px;
-    gap: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 320px;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.sobre-contatos a {
+  transition: transform 0.25s, filter 0.25s;
+}
+
+.sobre-contatos a:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.2);
 }
 
 .sobre-contatos img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
+/* ===================== FORMAÇÕES ===================== */
 .education-item img {
-    background-color: rgba(255, 255, 255, 0.05); /* Um leve fundo cinza para destacar logos */
-    padding: 10px;
-    transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  transition: transform 0.3s ease;
 }
 
 .education-item img:hover {
-    transform: scale(1.05); /* Efeito visual ao passar o mouse */
-}/* Cores:  #2cff05 #706677 #001524 */
-
-
-body {
-    background-color: #001524;
-    color: #00F0B5;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  transform: scale(1.05);
 }
 
-#sobre {
-    background: linear-gradient(180deg, #2cff05 0%, #1e7f1c 50%, #101018 100%);
+/* ===================== SKILLS ===================== */
+.skills-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  transition: border-color 0.3s;
 }
 
-#formacoes {
-    background: linear-gradient(180deg, #101018 0%, #3d3a46 50%, #706677 100%);
+.skills-card:hover {
+  border-color: rgba(0, 240, 181, 0.3);
 }
 
-#projetos {
-    background: linear-gradient(180deg, #706677 0%, #2e2f36 50%, #001524 100%);
+/* Ícone circular de categoria */
+.skills-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
+.skills-icon-wrap.hard {
+  background: rgba(0, 240, 181, 0.15);
+  color: #00F0B5;
+  border: 1px solid rgba(0, 240, 181, 0.35);
+}
+
+.skills-icon-wrap.soft {
+  background: rgba(44, 255, 5, 0.12);
+  color: #2cff05;
+  border: 1px solid rgba(44, 255, 5, 0.3);
+}
+
+/* Badges de skill */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.skill-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-badge.hard {
+  background: rgba(0, 240, 181, 0.1);
+  color: #00F0B5;
+  border: 1px solid rgba(0, 240, 181, 0.3);
+}
+
+.skill-badge.hard:hover {
+  background: rgba(0, 240, 181, 0.2);
+}
+
+.skill-badge.soft {
+  background: rgba(44, 255, 5, 0.08);
+  color: #2cff05;
+  border: 1px solid rgba(44, 255, 5, 0.25);
+}
+
+.skill-badge.soft:hover {
+  background: rgba(44, 255, 5, 0.18);
+}
+
+/* ===================== CERTIFICAÇÕES ===================== */
+.cert-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 240, 181, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 240, 181, 0.1);
+}
+
+.cert-icon {
+  color: #00F0B5;
+}
+
+.cert-card h5 {
+  color: #ffffff;
+}
+
+.btn-cert {
+  background: transparent;
+  color: #00F0B5;
+  border: 1px solid #00F0B5;
+  border-radius: 20px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.btn-cert:hover {
+  background: #00F0B5;
+  color: #001524;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background-color: #01223a;
+  border-top: 1px solid rgba(0, 240, 181, 0.1);
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 768px) {
+  .sobre-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .sobre-foto img {
     width: 100%;
-    z-index: 1030;
-}
+    max-width: 300px;
+  }
 
-.main-content {
-    padding-top: 90px;
-}
-
-.section {
-    min-height: 100vh;
-    padding: 80px 15px 60px;
-}
-
-.imgLogo {
+  .sobre-foto {
     width: 100%;
-    max-width: 175px;
-    height: auto;
-    display: block;
-}
-
-/* SOBRE */
-
-.sobre-container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:60px;
-    flex-wrap:wrap;
-}
-
-.sobre-texto{
-    max-width:550px;
-}
-
-.titulo-sobre{
-    color:#2cff05;
-    font-size:42px;
-    font-weight:700;
-    margin-bottom:25px;
-}
-
-.sobre-texto p{
-    color:#ffffff;
-    line-height:1.7;
-    font-size:17px;
-}
-
-.sobre-foto img{
-    width:320px;
-    border-radius:18px;
-    object-fit:cover;
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
-}
-
-.sobre-contatos {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    max-width: 320px;
-    margin-top: 20px;
-    gap: 10px;
-}
+  }
 
-.sobre-contatos img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.education-item img {
-    background-color: rgba(255, 255, 255, 0.05); /* Um leve fundo cinza para destacar logos */
-    padding: 10px;
-    transition: transform 0.3s ease;
-}
-
-.education-item img:hover {
-    transform: scale(1.05); /* Efeito visual ao passar o mouse */
+  .sobre-contatos {
+    max-width: 100%;
+    justify-content: center;
+  }
 }

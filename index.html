@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guilherme Machado — Dev Portfolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
+    <title>Guilherme Machado — Desenvolvedor Full-Stack</title>
+    <meta
+      name="description"
+      content="Guilherme Machado — desenvolvedor full-stack em formação. Aplicações web e mobile em Python, JavaScript e Kotlin, do banco de dados ao deploy."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Guilherme Machado — Desenvolvedor Full-Stack" />
+    <meta
+      property="og:description"
+      content="Aplicações web e mobile em Python, JavaScript e Kotlin, do banco de dados ao deploy."
+    />
+    <meta property="og:image" content="images/pessoa.jpg" />
+    <meta name="theme-color" content="#060B12" />
+    <link rel="icon" href="images/LogoGM.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -18,658 +27,476 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body
-    data-bs-spy="scroll"
-    data-bs-target="#mainNavbar"
-    data-bs-offset="90"
-    tabindex="0"
-  >
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top" id="mainNavbar">
-      <div class="container">
-        <a class="navbar-brand brand-code" href="#">
-          <span class="brand-prefix">&lt;</span>GM<span class="brand-suffix"
-            >/&gt;</span
-          >
-        </a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarMenu"
-          aria-controls="navbarMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarMenu">
-          <ul class="navbar-nav ms-auto mb-2 mb-sm-0 gap-1">
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#formacoes">Formações</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#certificacoes">Certificações</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projetos">Projetos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#eventos">Eventos</a>
-            </li>
-            <li class="nav-item ms-sm-2">
-              <a
-                class="nav-link nav-cta"
-                href="/docs/Curriculo_Guilherme.pdf"
-                download
-              >
-                <i class="bi bi-download me-1"></i>CV
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <body>
+    <a class="skip-link" href="#topo">Pular para o conteúdo</a>
 
-    <main>
-      <!-- ===================== HERO / SOBRE ===================== -->
-      <section id="sobre" class="hero-section">
-        <div class="hero-grid-bg" aria-hidden="true"></div>
-        <div class="container hero-container">
-          <!-- Texto -->
-          <div class="hero-text">
-            <p class="hero-eyebrow">
-              <span class="eyebrow-dot"></span>Disponível para oportunidades
+    <header class="site-header">
+      <nav class="nav container" aria-label="Principal">
+        <a class="brand" href="#topo"><span>&lt;</span>GM<span>/&gt;</span></a>
+        <ul class="nav-list">
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li>
+            <a class="btn-ghost" href="docs/Curriculo_Guilherme.pdf" download>
+              <i class="bi bi-download" aria-hidden="true"></i>Currículo
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="topo">
+      <!-- ===================== HERO ===================== -->
+      <section class="section hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="status">
+              <span class="status-dot" aria-hidden="true"></span>Disponível para
+              oportunidades
             </p>
-            <h1 class="hero-name">
-              Guilherme<br /><span class="hero-name-accent">Machado</span>
-            </h1>
-            <p class="hero-role">
-              <span class="mono-tag">&lt;</span>Dev em formação
-              <span class="mono-tag">/&gt;</span>
+            <h1 class="hero-title">Guilherme Machado</h1>
+            <p class="hero-lead">
+              Desenvolvedor full-stack em formação. Construo aplicações web e
+              mobile do banco de dados ao deploy.
             </p>
             <p class="hero-bio">
               Estudante de Desenvolvimento de Software Multiplataforma na
-              <strong>FATEC Prof. Jessen Vidal</strong>. Focado em resolver
-              problemas reais com código limpo — Python, JavaScript, PHP e web
-              em geral.
+              <span class="hl">FATEC Prof. Jessen Vidal</span> e assistente de
+              engenheiro de P&amp;D na <span class="hl">UAVI Global</span>.
+              Python, JavaScript, Kotlin e infraestrutura em containers.
             </p>
             <div class="hero-actions">
-              <a href="#projetos" class="btn btn-primary-custom">
-                Ver Projetos <i class="bi bi-arrow-right ms-1"></i>
+              <a class="btn-primary" href="#projetos">
+                Ver projetos <i class="bi bi-arrow-right" aria-hidden="true"></i>
               </a>
-              <div class="hero-socials">
+              <a class="btn-secondary" href="#contato">Entrar em contato</a>
+              <div class="icon-row">
                 <a
-                  href="https://www.linkedin.com/in/guilherme-machado-silva-ba2332323/"
-                  target="_blank"
-                  title="LinkedIn"
-                  class="social-icon"
-                >
-                  <i class="bi bi-linkedin"></i>
-                </a>
-                <a
+                  class="icon-btn"
                   href="https://github.com/MachadoGuilherme1206"
                   target="_blank"
-                  title="GitHub"
-                  class="social-icon"
-                >
-                  <i class="bi bi-github"></i>
-                </a>
+                  rel="noopener"
+                  aria-label="GitHub"
+                  ><i class="bi bi-github" aria-hidden="true"></i
+                ></a>
                 <a
+                  class="icon-btn"
+                  href="https://www.linkedin.com/in/guilherme-machado-silva-ba2332323/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                  ><i class="bi bi-linkedin" aria-hidden="true"></i
+                ></a>
+                <a
+                  class="icon-btn"
                   href="https://wa.me/12991511101"
                   target="_blank"
-                  title="WhatsApp"
-                  class="social-icon"
-                >
-                  <i class="bi bi-whatsapp"></i>
-                </a>
+                  rel="noopener"
+                  aria-label="WhatsApp"
+                  ><i class="bi bi-whatsapp" aria-hidden="true"></i
+                ></a>
               </div>
             </div>
+            <p class="hero-stack">
+              <span>Python</span><span class="sep">/</span><span>JavaScript</span
+              ><span class="sep">/</span><span>Kotlin</span
+              ><span class="sep">/</span><span>PHP</span
+              ><span class="sep">/</span><span>Docker</span
+              ><span class="sep">/</span><span>AWS</span>
+            </p>
           </div>
-
-          <!-- Foto -->
-          <div class="hero-photo-wrap">
-            <div class="hero-photo-frame">
-              <img
-                src="/images/pessoa.jpg"
-                alt="Foto de Guilherme Machado"
-                class="hero-photo"
-              />
-            </div>
-            <div class="hero-photo-badge">
-              <i class="bi bi-code-slash me-1"></i>Dev
-            </div>
-          </div>
-        </div>
-
-        <!-- Scroll hint -->
-        <div class="scroll-hint" aria-hidden="true">
-          <span class="scroll-line"></span>
+          <figure class="hero-figure">
+            <img
+              src="images/pessoa.jpg"
+              alt="Retrato de Guilherme Machado"
+              width="400"
+              height="500"
+            />
+            <figcaption>
+              <span>São José dos Campos, SP</span><span>BR · UTC−3</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
-      <!-- ===================== FORMAÇÕES ===================== -->
-      <section id="formacoes" class="section-dark">
+      <!-- ===================== EXPERIÊNCIA ===================== -->
+      <section class="section section-alt" id="experiencia">
         <div class="container">
-          <div class="section-header">
-            <span class="section-label">trajetória</span>
-            <h2 class="section-title">Formações</h2>
+          <div class="section-head">
+            <span class="section-num">01</span>
+            <h2>Experiência</h2>
           </div>
-
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-card">
-                  <div class="timeline-logo-wrap">
-                    <img
-                      src="/images/fatec.jpg"
-                      alt="Logo FATEC"
-                      class="timeline-logo"
-                    />
-                  </div>
-                  <div class="timeline-info">
-                    <span class="timeline-badge active-badge"
-                      >Em andamento</span
-                    >
-                    <h5 class="timeline-institution">
-                      FATEC Prof. Jessen Vidal
-                    </h5>
-                    <p class="timeline-course">
-                      Desenvolvimento de Software Multiplataforma
-                    </p>
-                    <p class="timeline-period">
-                      <i class="bi bi-calendar3 me-1"></i>Fev/2026 – presente
-                    </p>
-                  </div>
-                </div>
-              </div>
+          <article class="exp-grid">
+            <div>
+              <p class="meta">MAR/2026 — JUL/2026</p>
+              <h3 class="exp-role">Assistente de Engenheiro de P&amp;D</h3>
+              <p class="exp-company">UAVI Global</p>
+              <p class="exp-summary">
+                Atuação em pesquisa e desenvolvimento junto ao time de
+                engenharia, entre a bancada e o software.
+              </p>
+              <ul class="exp-list">
+                <li>
+                  <span class="exp-num">01</span>
+                  <p>
+                    Participei da confecção e dos testes de drones, acompanhando
+                    a montagem e a validação em bancada e em campo.
+                  </p>
+                </li>
+                <li>
+                  <span class="exp-num">02</span>
+                  <p>
+                    Desenvolvi um software para virtualizar a ficha de teste dos
+                    drones, substituindo o registro em papel por um fluxo
+                    digital que padroniza os ensaios e mantém o histórico de
+                    cada aeronave acessível ao time.
+                  </p>
+                </li>
+              </ul>
             </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-card">
-                  <div class="timeline-logo-wrap">
-                    <img
-                      src="/images/univap.jpg"
-                      alt="Logo UNIVAP"
-                      class="timeline-logo"
-                    />
-                  </div>
-                  <div class="timeline-info">
-                    <span class="timeline-badge done-badge">Concluído</span>
-                    <h5 class="timeline-institution">UNIVAP</h5>
-                    <p class="timeline-course">
-                      Ensino Médio Técnico em Informática
-                    </p>
-                    <p class="timeline-period">
-                      <i class="bi bi-calendar3 me-1"></i>Jan/2023 – Dez/2025
-                    </p>
-                  </div>
-                </div>
+            <!-- Substitua os placeholders abaixo por fotos reais em images/ -->
+            <div class="exp-media">
+              <div class="media wide">
+                <span>foto UAVI Global — equipe ou bancada</span>
               </div>
+              <div class="media"><span>projeto / produto</span></div>
+              <div class="media"><span>detalhe técnico</span></div>
             </div>
-          </div>
-
-          <div class="text-center mt-5">
-            <a
-              href="/docs/comprovantes.pdf"
-              download
-              class="btn btn-outline-custom"
-            >
-              <i class="bi bi-file-earmark-arrow-down me-2"></i>Baixar
-              Comprovantes
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== SKILLS ===================== -->
-      <section id="skills" class="section-mid">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-label">competências</span>
-            <h2 class="section-title">Skills</h2>
-          </div>
-
-          <div class="row g-4">
-            <!-- Hard Skills -->
-            <div class="col-12 col-lg-6">
-              <div class="skills-card h-100">
-                <div class="skills-card-header">
-                  <div class="skills-icon hard">
-                    <i class="bi bi-cpu-fill"></i>
-                  </div>
-                  <h4 class="skills-card-title">Hard Skills</h4>
-                </div>
-                <div class="skill-tags">
-                  <span class="stag hard"
-                    ><i class="bi bi-filetype-py"></i>Python</span
-                  >
-                  <span class="stag hard"
-                    ><i class="bi bi-filetype-js"></i>JavaScript</span
-                  >
-                  <span class="stag hard"
-                    ><i class="bi bi-filetype-html"></i>HTML5</span
-                  >
-                  <span class="stag hard"
-                    ><i class="bi bi-filetype-css"></i>CSS3</span
-                  >
-                  <span class="stag hard"
-                    ><i class="bi bi-filetype-php"></i>PHP</span
-                  >
-                  <span class="stag hard"
-                    ><i class="bi bi-bootstrap"></i>Bootstrap</span
-                  >
-                  <span class="stag hard"><i class="bi bi-git"></i>Git</span>
-                  <span class="stag hard"
-                    ><i class="bi bi-github"></i>GitHub</span
-                  >
-                  <span class="stag hard"
-                    ><i class="bi bi-database"></i>MySQL</span
-                  >
-                  <span class="stag hard"><i class="bi bi-box"></i>Docker</span>
-                  <span class="stag hard"
-                    ><i class="bi bi-cloud"></i>AWS EC2</span
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Soft Skills -->
-            <div class="col-12 col-lg-6">
-              <div class="skills-card h-100">
-                <div class="skills-card-header">
-                  <div class="skills-icon soft">
-                    <i class="bi bi-people-fill"></i>
-                  </div>
-                  <h4 class="skills-card-title">Soft Skills</h4>
-                </div>
-                <div class="skill-tags">
-                  <span class="stag soft"
-                    ><i class="bi bi-lightbulb"></i>Resolução de Problemas</span
-                  >
-                  <span class="stag soft"
-                    ><i class="bi bi-people"></i>Trabalho em Equipe</span
-                  >
-                  <span class="stag soft"
-                    ><i class="bi bi-chat-dots"></i>Comunicação</span
-                  >
-                  <span class="stag soft"
-                    ><i class="bi bi-clock"></i>Organização</span
-                  >
-                  <span class="stag soft"
-                    ><i class="bi bi-arrow-repeat"></i>Adaptabilidade</span
-                  >
-                  <span class="stag soft"
-                    ><i class="bi bi-graph-up"></i>Aprendizado Contínuo</span
-                  >
-                  <span class="stag soft"
-                    ><i class="bi bi-check2-circle"></i>Proatividade</span
-                  >
-                  <span class="stag soft"
-                    ><i class="bi bi-eye"></i>Atenção aos Detalhes</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== CERTIFICAÇÕES ===================== -->
-      <section id="certificacoes" class="section-dark">
-        <div class="container">
-          <div class="section-header">
-            <span class="section-label">reconhecimentos</span>
-            <h2 class="section-title">Certificações</h2>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="cert-card h-100">
-                <div class="cert-card-top">
-                  <div class="cert-icon-wrap">
-                    <i class="bi bi-patch-check-fill"></i>
-                  </div>
-                  <span class="cert-year">Mês/Ano</span>
-                </div>
-                <h5 class="cert-title">Nome do Certificado</h5>
-                <p class="cert-issuer">Instituição Emissora</p>
-                <a href="#" class="cert-link" target="_blank">
-                  Ver certificado <i class="bi bi-arrow-up-right ms-1"></i>
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="cert-card h-100">
-                <div class="cert-card-top">
-                  <div class="cert-icon-wrap">
-                    <i class="bi bi-patch-check-fill"></i>
-                  </div>
-                  <span class="cert-year">Mês/Ano</span>
-                </div>
-                <h5 class="cert-title">Nome do Certificado</h5>
-                <p class="cert-issuer">Instituição Emissora</p>
-                <a href="#" class="cert-link" target="_blank">
-                  Ver certificado <i class="bi bi-arrow-up-right ms-1"></i>
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="cert-card h-100">
-                <div class="cert-card-top">
-                  <div class="cert-icon-wrap">
-                    <i class="bi bi-patch-check-fill"></i>
-                  </div>
-                  <span class="cert-year">Mês/Ano</span>
-                </div>
-                <h5 class="cert-title">Nome do Certificado</h5>
-                <p class="cert-issuer">Instituição Emissora</p>
-                <a href="#" class="cert-link" target="_blank">
-                  Ver certificado <i class="bi bi-arrow-up-right ms-1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
       </section>
 
       <!-- ===================== PROJETOS ===================== -->
-      <section id="projetos" class="section-mid">
+      <section class="section" id="projetos">
         <div class="container">
-          <div class="section-header">
-            <span class="section-label">portfólio</span>
-            <h2 class="section-title">Projetos</h2>
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <h2>Projetos</h2>
+            <span class="section-aside">5 repositórios</span>
           </div>
 
-          <div class="row g-4">
-            <!-- Projeto 1 — Lista de Compras -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="project-card h-100">
-                <div class="project-card-header">
-                  <div class="project-lang-dot python"></div>
-                  <span class="project-tech">Python · Flask · MySQL</span>
-                  <a
-                    href="https://github.com/MachadoGuilherme1206/Atividade4_Jean"
-                    target="_blank"
-                    class="project-gh ms-auto"
-                  >
-                    <i class="bi bi-github"></i>
-                  </a>
-                </div>
-                <h5 class="project-title">Lista de Compras</h5>
-                <p class="project-desc">
-                  Aplicação web para gerenciamento de listas de compras.
-                  Containerizada com Docker e deployada na AWS EC2, com banco de
-                  dados MySQL e servidor Gunicorn.
-                </p>
-                <div class="project-tags">
-                  <span class="ptag">Docker</span>
-                  <span class="ptag">AWS EC2</span>
-                  <span class="ptag">Gunicorn</span>
-                </div>
-              </div>
+          <article class="featured">
+            <div>
+              <span class="kicker">Destaque</span>
+              <h3>Site de Auxílio Eleitoral</h3>
+              <p>
+                Aplicação web para auxiliar eleitores a encontrarem informações
+                sobre candidatos a deputado federal. Desenvolvida em Python com
+                Flask, consumindo a API da Câmara dos Deputados.
+              </p>
+              <ul class="tags">
+                <li>Flask</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>API Câmara dos Deputados</li>
+              </ul>
+              <a
+                class="btn-secondary"
+                href="https://github.com/ninaduquehc/API"
+                target="_blank"
+                rel="noopener"
+                ><i class="bi bi-github" aria-hidden="true"></i>Ver repositório</a
+              >
             </div>
+            <div class="media wide"><span>screenshot do projeto</span></div>
+          </article>
 
-            <!-- Projeto 2 — App Haloween -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="project-card h-100">
-                <div class="project-card-header">
-                  <div class="project-lang-dot kotlin"></div>
-                  <span class="project-tech">Kotlin · SQLite · Android Compose</span>
-                  <a
-                    href="https://github.com/MachadoGuilherme1206/Halloween_TrickOrTreat"
-                    target="_blank"
-                    class="project-gh ms-auto"
-                  >
-                    <i class="bi bi-github"></i>
-                  </a>
-                </div>
-                <h5 class="project-title">App Haloween</h5>
-                <p class="project-desc">
-                  Aplicação mobile para gerenciamento de listas de casas de Halloween.
-                  Desenvolvida em Kotlin com arquitetura MVVM.
-                </p>
-                <div class="project-tags">
-                  <span class="ptag">Kotlin</span>
-                  <span class="ptag">SQLLite</span>
-                  <span class="ptag">Android Compose</span>
-                </div>
-              </div>
-            </div>
+          <ul class="project-list">
+            <li>
+              <a
+                href="https://github.com/MachadoGuilherme1206/TCC"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="pl-title"
+                  ><span class="pl-num">02</span
+                  ><span class="pl-name">Gerenciamento de Tarefas</span></span
+                >
+                <span class="pl-desc"
+                  >Aplicação web para gerenciamento de tarefas com integração a
+                  ferramentas financeiras.</span
+                >
+                <span class="pl-stack"
+                  >Node.js · Express · JWT
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/MachadoGuilherme1206/Surdo"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="pl-title"
+                  ><span class="pl-num">03</span
+                  ><span class="pl-name"
+                    >App para Deficientes Auditivos</span
+                  ></span
+                >
+                <span class="pl-desc"
+                  >Aplicação mobile para auxiliar deficientes auditivos a se
+                  comunicarem. Arquitetura MVVM com banco Firebase.</span
+                >
+                <span class="pl-stack"
+                  >Kotlin · Firebase
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/MachadoGuilherme1206/Atividade4_Jean"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="pl-title"
+                  ><span class="pl-num">04</span
+                  ><span class="pl-name">Lista de Compras</span></span
+                >
+                <span class="pl-desc"
+                  >Aplicação web containerizada com Docker e deployada na AWS
+                  EC2, com MySQL e servidor Gunicorn.</span
+                >
+                <span class="pl-stack"
+                  >Flask · Docker · AWS
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i
+                ></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/MachadoGuilherme1206/Halloween_TrickOrTreat"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="pl-title"
+                  ><span class="pl-num">05</span
+                  ><span class="pl-name">App Halloween</span></span
+                >
+                <span class="pl-desc"
+                  >Aplicação mobile para gerenciamento de listas de casas de
+                  Halloween. Arquitetura MVVM.</span
+                >
+                <span class="pl-stack"
+                  >Kotlin · SQLite
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i
+                ></span>
+              </a>
+            </li>
+          </ul>
 
-            <!-- Projeto 3 — App para Deficiente Auditivos -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="project-card h-100">
-                <div class="project-card-header">
-                  <div class="project-lang-dot kotlin"></div>
-                  <span class="project-tech">Kotlin · FirebaseDB · Android Compose</span>
-                  <a
-                    href="https://github.com/MachadoGuilherme1206/Surdo"
-                    target="_blank"
-                    class="project-gh ms-auto"
-                  >
-                    <i class="bi bi-github"></i>
-                  </a>
-                </div>
-                <h5 class="project-title">App para Deficiente Auditivos</h5>
-                <p class="project-desc">
-                  Aplicação mobile para auxiliar deficientes auditivos a se comunicarem.
-                  Desenvolvida em Kotlin com arquitetura MVVM e banco de dados Firebase.
-                </p>
-                <div class="project-tags">
-                  <span class="ptag">Kotlin</span>
-                  <span class="ptag">FirebaseDB</span>
-                  <span class="ptag">Android Compose</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projeto 4 — Site de Gerenciamento de Tarefas Aliado a Ferramentas Financeiras -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="project-card h-100">
-                <div class="project-card-header">
-                  <div class="project-lang-dot javascript"></div>
-                  <span class="project-tech">JavaScript · HTML · CSS · Node.js  Express.js · JWT</span>
-                  <a
-                    href="https://github.com/MachadoGuilherme1206/TCC"
-                    target="_blank"
-                    class="project-gh ms-auto"
-                  >
-                    <i class="bi bi-github"></i>
-                  </a>
-                </div>
-                <h5 class="project-title">Site de Gerenciamento de Tarefas</h5>
-                <p class="project-desc">
-                  Aplicação web para gerenciamento de tarefas com integração a ferramentas financeiras.
-                  Desenvolvida em JavaScript com HTML e CSS.
-                </p>
-                <div class="project-tags">
-                  <span class="ptag">JavaScript</span>
-                  <span class="ptag">HTML</span>
-                  <span class="ptag">CSS</span>
-                  <span class="ptag">Node.js</span>
-                  <span class="ptag">Express.js</span>
-                  <span class="ptag">JWT</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projeto 5 — Site de Auxilio Eleitoral -->
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="project-card h-100">
-                <div class="project-card-header">
-                  <div class="project-lang-dot python"></div>
-                  <span class="project-tech">Flask · HTML · CSS · API Camara dos Deputados</span>
-                  <a
-                    href="https://github.com/ninaduquehc/API"
-                    target="_blank"
-                    class="project-gh ms-auto"
-                  >
-                    <i class="bi bi-github"></i>
-                  </a>
-                </div>
-                <h5 class="project-title">Site de Auxílio Eleitoral</h5>
-                <p class="project-desc">
-                  Aplicação web para auxiliar eleitores a encontrarem informações sobre candidatos a deputado federal.
-                  Desenvolvida em Python com Flask.
-                </p>
-                <div class="project-tags">
-                  <span class="ptag">Flask</span>
-                  <span class="ptag">HTML</span>
-                  <span class="ptag">CSS</span>
-                  <span class="ptag">API Camara dos Deputados</span>
-                </div>
-              </div>
-            </div>
-
-          <div class="text-center mt-5">
+          <p class="section-foot">
             <a
               href="https://github.com/MachadoGuilherme1206"
               target="_blank"
-              class="btn btn-outline-custom"
-            >
-              <i class="bi bi-github me-2"></i>Ver todos no GitHub
-            </a>
+              rel="noopener"
+              >Todos os repositórios no GitHub
+              <i class="bi bi-arrow-right" aria-hidden="true"></i
+            ></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== STACK ===================== -->
+      <section class="section section-alt" id="stack">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-num">03</span>
+            <h2>Stack</h2>
+          </div>
+          <div class="stack-grid">
+            <div class="stack-card">
+              <h3>Linguagens</h3>
+              <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Kotlin</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+            <div class="stack-card">
+              <h3>Web</h3>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
+                <li>Flask</li>
+                <li>Node.js</li>
+                <li>Express</li>
+              </ul>
+            </div>
+            <div class="stack-card">
+              <h3>Mobile</h3>
+              <ul>
+                <li>Android Compose</li>
+                <li>MVVM</li>
+              </ul>
+            </div>
+            <div class="stack-card">
+              <h3>Dados</h3>
+              <ul>
+                <li>MySQL</li>
+                <li>SQLite</li>
+                <li>Firebase</li>
+              </ul>
+            </div>
+            <div class="stack-card">
+              <h3>Infra</h3>
+              <ul>
+                <li>Docker</li>
+                <li>AWS EC2</li>
+                <li>Gunicorn</li>
+                <li>Git</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </div>
+          <div class="soft-row">
+            <span class="soft-label">Também</span>
+            <span class="chip">Resolução de problemas</span>
+            <span class="chip">Trabalho em equipe</span>
+            <span class="chip">Comunicação</span>
+            <span class="chip">Organização</span>
+            <span class="chip">Adaptabilidade</span>
+            <span class="chip">Aprendizado contínuo</span>
+            <span class="chip">Proatividade</span>
+            <span class="chip">Atenção aos detalhes</span>
           </div>
         </div>
       </section>
 
-      <!-- ===================== EVENTOS ===================== -->
-      <section id="eventos" class="section-dark">
+      <!-- ===================== FORMAÇÃO ===================== -->
+      <section class="section" id="formacao">
         <div class="container">
-          <div class="section-header">
-            <span class="section-label">experiências</span>
-            <h2 class="section-title">Eventos Participados</h2>
+          <div class="section-head">
+            <span class="section-num">04</span>
+            <h2>Formação</h2>
+          </div>
+          <div class="edu-list">
+            <div class="edu-row">
+              <div class="edu-main">
+                <img src="images/fatec.jpg" alt="Logo FATEC" width="48" height="48" />
+                <div>
+                  <h3>FATEC Prof. Jessen Vidal</h3>
+                  <p>Desenvolvimento de Software Multiplataforma</p>
+                </div>
+              </div>
+              <div class="edu-meta">
+                <span class="meta">Fev/2026 — presente</span>
+                <span class="pill pill-accent">Em andamento</span>
+              </div>
+            </div>
+            <div class="edu-row">
+              <div class="edu-main">
+                <img src="images/univap.jpg" alt="Logo UNIVAP" width="48" height="48" />
+                <div>
+                  <h3>UNIVAP</h3>
+                  <p>Ensino Médio Técnico em Informática</p>
+                </div>
+              </div>
+              <div class="edu-meta">
+                <span class="meta">Jan/2023 — Dez/2025</span>
+                <span class="pill">Concluído</span>
+              </div>
+            </div>
           </div>
 
-          <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="event-card h-100">
-                <div class="event-card-top">
-                  <div class="event-icon-wrap">
-                    <i class="bi bi-calendar-event-fill"></i>
-                  </div>
-                  <span class="event-type-badge hackathon">Hackathon</span>
-                </div>
-                <h5 class="event-title">Hackathon XVII</h5>
-                <p class="event-org">
-                  <i class="bi bi-building me-1"></i>Univap - Urbanova
-                </p>
-                <p class="event-date">
-                  <i class="bi bi-calendar3 me-1"></i>Setembro/2025 · São José
-                  dos Campos
-                </p>
-                <p class="event-desc">
-                  Participação no Hackathon XVII, desenvolvendo uma soluções
-                  para problemas propostos por professores da intituição.
-                  Conquistei o 7° Lugar.
-                </p>
+          <h3 class="sub-head">Eventos</h3>
+          <div class="event-grid">
+            <div class="event-card">
+              <div class="event-top">
+                <h4>Hackathon XVII</h4>
+                <span class="meta">SET/2025</span>
               </div>
+              <p class="event-org">Univap — Urbanova</p>
+              <p>
+                Desenvolvimento de soluções para problemas propostos por
+                professores da instituição. 7° lugar.
+              </p>
             </div>
+            <div class="event-card">
+              <div class="event-top">
+                <h4>Iniciação Científica</h4>
+                <span class="meta">OUT/2025</span>
+              </div>
+              <p class="event-org">Univap — Urbanova</p>
+              <p>
+                Apresentação de sistema de gerenciamento de tarefas e análise de
+                saúde financeira em ambiente empresarial, elogiado pela banca
+                pela inovação e aplicabilidade.
+              </p>
+            </div>
+            <div class="event-card">
+              <div class="event-top">
+                <h4>Feira Técnica</h4>
+                <span class="meta">2024 · 2025</span>
+              </div>
+              <p class="event-org">Univap — Centro</p>
+              <p>
+                Apresentação de projetos do curso técnico: jogo em Unity, site de
+                apostas esportivas e o TCC.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="event-card h-100">
-                <div class="event-card-top">
-                  <div class="event-icon-wrap">
-                    <i class="bi bi-calendar-event-fill"></i>
-                  </div>
-                  <span class="event-type-badge feira">Feira</span>
-                </div>
-                <h5 class="event-title">Feira Técnica</h5>
-                <p class="event-org">
-                  <i class="bi bi-building me-1"></i>Univap - Centro
-                </p>
-                <p class="event-date">
-                  <i class="bi bi-calendar3 me-1"></i>2024 e 2025 · São José dos
-                  Campos
-                </p>
-                <p class="event-desc">
-                  Mostrei projetos desenvolvidos durante o curso técnico, como
-                  um jogo em Unity, um site de apostas esportivas e meu TCC.
-                  Recebi feedbacks positivos de visitantes e professores,
-                  destacando a qualidade técnica e a apresentação dos projet.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-              <div class="event-card h-100">
-                <div class="event-card-top">
-                  <div class="event-icon-wrap">
-                    <i class="bi bi-calendar-event-fill"></i>
-                  </div>
-                  <span class="event-type-badge congresso"
-                    >Iniciação Científica</span
-                  >
-                </div>
-                <h5 class="event-title">Iniciação Científica</h5>
-                <p class="event-org">
-                  <i class="bi bi-building me-1"></i>Univap - Urbanova
-                </p>
-                <p class="event-date">
-                  <i class="bi bi-calendar3 me-1"></i>Outubro/2025 · São José
-                  dos Campos
-                </p>
-                <p class="event-desc">
-                  Apresentei meu projeto de iniciação científica, que consistiu
-                  no desenvolvimento de um sistema de gerenciamento de tarefas e
-                  analise de saúde financeira em um ambiente empresarial. O
-                  projeto foi bem recebido pela banca avaliadora, que elogiou a
-                  inovação e a aplicabilidade da solução proposta.
-                </p>
-              </div>
-            </div>
+      <!-- ===================== CONTATO ===================== -->
+      <section class="section" id="contato">
+        <div class="container contact-grid">
+          <div>
+            <span class="section-num">05</span>
+            <h2 class="contact-title">Aberto a estágio, júnior e freelas.</h2>
+            <p class="contact-sub">Respondo rápido no WhatsApp e no LinkedIn.</p>
+          </div>
+          <div class="contact-list">
+            <a href="https://wa.me/12991511101" target="_blank" rel="noopener">
+              <span><i class="bi bi-whatsapp" aria-hidden="true"></i>WhatsApp</span>
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/guilherme-machado-silva-ba2332323/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span><i class="bi bi-linkedin" aria-hidden="true"></i>LinkedIn</span>
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://github.com/MachadoGuilherme1206"
+              target="_blank"
+              rel="noopener"
+            >
+              <span><i class="bi bi-github" aria-hidden="true"></i>GitHub</span>
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+            <a href="docs/Curriculo_Guilherme.pdf" download>
+              <span
+                ><i class="bi bi-file-earmark-text" aria-hidden="true"></i>Currículo
+                (PDF)</span
+              >
+              <i class="bi bi-download" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container">
-        <div class="footer-inner">
-          <span class="brand-code footer-brand">
-            <span class="brand-prefix">&lt;</span>GM<span class="brand-suffix"
-              >/&gt;</span
-            >
-          </span>
-          <span class="footer-copy"> © 2026 Guilherme Machado Silva </span>
-          <div class="footer-socials">
-            <a
-              href="https://www.linkedin.com/in/guilherme-machado-silva-ba2332323/"
-              target="_blank"
-              class="social-icon-sm"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <a
-              href="https://github.com/MachadoGuilherme1206"
-              target="_blank"
-              class="social-icon-sm"
-              ><i class="bi bi-github"></i
-            ></a>
-            <a
-              href="https://wa.me/12991511101"
-              target="_blank"
-              class="social-icon-sm"
-              ><i class="bi bi-whatsapp"></i
-            ></a>
-          </div>
-        </div>
+      <div class="container footer-inner">
+        <span class="brand"><span>&lt;</span>GM<span>/&gt;</span></span>
+        <span class="footer-copy"
+          >© 2026 Guilherme Machado Silva · São José dos Campos, SP</span
+        >
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
